@@ -1,0 +1,15 @@
+def quick_sort(lists):
+    if len(lists) <= 1:
+        return lists  # recursion export
+    left = []
+    right = []
+    base = lists.pop()
+    for x in lists:
+        if x <= base:
+            left.append(x)
+        else:
+            right.append(x)
+    return quick_sort(left) + [base] + quick_sort(right)
+
+test = [1, 23, 45, 12, 66, 21]
+print quick_sort(test)
