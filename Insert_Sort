@@ -1,0 +1,11 @@
+def insert_sort(lists):
+    count = len(lists)
+    for i in range(1, count):
+        key = lists[i]  # key should compare to all element before
+        j = i-1
+        while j >= 0:
+            if lists[j] > key: # every element compare with the one
+                lists[j+1] = lists[j]
+                lists[j] = key
+            j -= 1
+    return lists
